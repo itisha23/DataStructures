@@ -23,14 +23,10 @@ int height(struct Node*node)
 }
 void printgivenlevel(Node *node,int level,int &x)
 {
-    //int x;
     if(node==NULL)
     return;
     else if(level==1)
-    {
         x=node->data;
-      
-    }
     else
     {
          printgivenlevel(node->left,level-1,x);
@@ -40,7 +36,6 @@ void printgivenlevel(Node *node,int level,int &x)
 }
 void rightView(Node *root)
 {
-   // Your Code here
    int i,x;
    int levels=height(root);
    cout<<root->data<<" ";
