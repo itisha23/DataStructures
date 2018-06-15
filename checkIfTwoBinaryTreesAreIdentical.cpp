@@ -35,6 +35,7 @@ bool isIdentical(Node *r1, Node *r2)
         }
         else if(s1.empty()==1 && s2.empty()==1)
            return true;
+       // You can even comment the below condition : it will give the correct answer.
         else if(s1.empty()!=1 || s2.empty()!=1)
            return false;
         
