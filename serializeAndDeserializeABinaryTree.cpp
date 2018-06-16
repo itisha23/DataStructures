@@ -35,20 +35,13 @@ void serialize(Node *root,vector<int> &A)
  Node *func(vector<int> &A,int &i)
 {
     struct Node *node;
-    if(i==0)
-    {
-        struct Node* newnode=(struct Node*)malloc(sizeof(struct Node));
-        newnode->data=A[i];
-        node=newnode;
-    }
+    
     if(A[i]==-1)
     return NULL;
-    if(A[i]!=-1 && i!=0)
-    {
          struct Node* newnode=(struct Node *)malloc(sizeof(struct Node));
         newnode->data=A[i];
         node=newnode;
-    }
+ 
     i++;
     node->left=func(A,i);
     i++;
