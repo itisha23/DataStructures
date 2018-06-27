@@ -16,16 +16,15 @@ bool func(struct Node *root,vector<struct Node *>&path,int key)
 {
     if(root==NULL)
     return false;
+    
     path.push_back(root);
-     if(root->data==key)
-     {
-         //cout<<root->data<<" ";
-          return true;
-         
-     }
+    
+    if(root->data==key)
+        return true;
    
     if((root->left&&func(root->left,path,key))||(root->right&&func(root->right,path,key)))
       return true;
+    
     path.pop_back();
     return false;
 }
@@ -44,10 +43,8 @@ Node * LCA(Node* root ,int n1 ,int n2 )
    for(i=0;i<path1.size()&& i<path2.size();i++)
    {
        if(path1[i]==path2[i])
-       {
            ptr=path1[i];
-          // break;
-       }
+
        else
        break;
        
