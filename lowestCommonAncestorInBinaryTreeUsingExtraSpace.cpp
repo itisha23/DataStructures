@@ -40,14 +40,6 @@ Node * LCA(Node* root ,int n1 ,int n2 )
   ispresent2=func(root,path2,n2);
    if(ispresent1==false||ispresent2==false)
      return NULL;
-    
-    
-    /*for(i=0;i<path2.size();i++)
-     {
-           ptr=path2[i];
-           cout<<ptr->data<<" ";
-     }*/
-       
      
    for(i=0;i<path1.size()&& i<path2.size();i++)
    {
